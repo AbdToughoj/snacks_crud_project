@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% block content%}
+<h1>{{snack.title|capfirst}} Update</h1>
+
+<form  method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+
+</form>
+<br>
+<h2><a href="{% url 'snacks' %}">Back To Home</a> </h2>
+{% endblock%}
